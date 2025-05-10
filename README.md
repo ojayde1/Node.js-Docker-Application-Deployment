@@ -38,14 +38,19 @@ Create a file named `app.js`, use vim command open the file and add the followin
 const http = require('http');
 const PORT = 5000;
 
+--------
+
 const server = http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('WELCOME TO DATAFORTE!!');
 });
 
+---
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+---
 
 ![Screenshot (98)](https://github.com/user-attachments/assets/26ffff66-30bd-4537-9f51-9622cac52b3a)
 
@@ -111,7 +116,8 @@ newgrp docker
 Run the following command in your terminal to build the Docker image:
 docker build -t node-docker-app .
 
-![Screenshot (101)](https://github.com/user-attachments/assets/af3c7166-e090-4999-a638-f42bb121d7b9)
+![Screenshot (102)](https://github.com/user-attachments/assets/17898e37-a9bd-4097-a63a-8faa775432da)
+
 
 ---
 
