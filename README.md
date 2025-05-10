@@ -38,19 +38,18 @@ Create a file named `app.js`, use vim command open the file and add the followin
 const http = require('http');
 const PORT = 5000;
 
---------
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('WELCOME TO DATAFORTE!!');
 });
 
----
+
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
----
+
 
 ![Screenshot (98)](https://github.com/user-attachments/assets/26ffff66-30bd-4537-9f51-9622cac52b3a)
 
@@ -137,10 +136,16 @@ Login to Docker Hub
 ![Screenshot (104)](https://github.com/user-attachments/assets/0011b12e-fc00-4ff3-9bf8-1690346a6bf3)
 
 If you created your account with Google, go to Docker Hub > Account Settings > Security to create a CLI password.
+
+
 docker login -u <username>
+
 Tag the Docker image:
+
 docker tag node-docker-app ojayde35/node-docker-app:v1
+
 Push to Docker Hub:
+
 docker push ojayde35/node-docker-app:v1
 
 ![Screenshot (105)](https://github.com/user-attachments/assets/ed553335-7bfa-404b-97bc-78442d8fb017)
